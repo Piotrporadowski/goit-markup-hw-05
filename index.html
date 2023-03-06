@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    
     <header class="container">
       <div class="navbar">
       <a href="#" class="brand-link">
@@ -29,9 +30,15 @@
       </a>
       <nav>
         <ul class="navigation-list">
-          <li><a class="navigation" href="#">Agencja</a></li>
-          <li><a class="navigation" href="./portfolio.html">Portfolio</a></li>
-          <li><a class="navigation" href="#">Kontakt</a></li>
+          <li class="underline">
+            <a class="navigation-item current-page" href="index.html">Agencja</a>
+          </li>
+          <li class="transition-item">
+            <a class="navigation-item" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="transition-item">
+            <a class="navigation-item" href="#">Kontakt</a>
+          </li>
         </ul>
       </nav>
       <ul class="contact-top-link">
@@ -60,7 +67,9 @@
       <section>
         <div class="slider">
           <h1>efektywne rozwiązania dla waszego biznesu</h1>
-          <button type="button" class="slider-button">Zamów usługę</button>
+          <button type="button" class="slider-button" data-modal-open>Zamów usługę</button>
+          </div>
+
         </div>
       </section>
       <!--LOREM IPSUM-->
@@ -129,29 +138,38 @@
         <div class="container">
         <h2>czym się zajmujemy</h2>
         <ul class="what-we-do-photo">
-          <li>
+          <li class="box1">
             <img
               src="./images/photo1/obraz1.jpg"
               alt="pisanie na klawiaturze"
               width="370"
               height="294"
             />
+            <div class="overlay1">
+              <p>desktop apps</p>
+            </div>
           </li>
-          <li>
+          <li class="box1">
             <img
               src="./images/photo1/obraz2.jpg"
               alt="tworzenie aplikacji mobilnej"
               width="370"
               height="294"
             />
+            <div class="overlay1">
+              <p>mobile apps</p>
+            </div>
           </li>
-          <li>
+          <li class="box1">
             <img
               src="./images/photo1/obraz3.jpg"
               alt="rysowanie na teblecie"
               width="370"
               height="294"
             />
+            <div class="overlay1">
+              <p>design solution</p>
+            </div>
           </li>
         </ul>
         </div>
@@ -416,5 +434,13 @@
       
     </section>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-button" data-modal-close>
+          &#x2715;
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
