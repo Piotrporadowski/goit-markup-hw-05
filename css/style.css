@@ -184,7 +184,23 @@ p {
     letter-spacing: 0.02em;
     color: var(--secondary-color)
 } 
-.navigation-list > li::after {
+.transition-item {
+    color: var(--main-text-color);
+    transition-property: color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .transition-item:hover,
+  .transition-item:focus {
+    color: var(--active-color);
+    transform: scale(1.1);
+  }
+  .transition-item a:hover,
+  .transition-item a:focus {
+    color: var(--active-color);
+    transform: scale(1.1);
+  }
+.underline::after {
     position: absolute;
     display: block;
     content: "";
@@ -194,7 +210,7 @@ p {
     background-color: var(--brand-color);
     margin-top: 25px;
     margin-bottom: 0;
-}
+  }
 
 /* MAIN */
 
