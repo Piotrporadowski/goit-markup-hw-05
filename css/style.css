@@ -192,12 +192,12 @@ p {
   }
   .transition-item:hover,
   .transition-item:focus {
-    color: var(--active-color);
+    color: var(--brand-color);
     transform: scale(1.1);
   }
   .transition-item a:hover,
   .transition-item a:focus {
-    color: var(--active-color);
+    color: var(--brand-color);
     transform: scale(1.1);
   }
 .underline::after {
@@ -210,6 +210,10 @@ p {
     background-color: var(--brand-color);
     margin-top: 25px;
     margin-bottom: 0;
+  }
+
+  .active {
+    color: #2196F3;
   }
 
 /* MAIN */
